@@ -1,0 +1,34 @@
+// news_in start
+
+.news_in{
+    position: relative;
+    margin-bottom: 100px;
+
+    &__img{
+        @include fiximg(100%,600px,true);
+        img{
+            max-height: 600px;
+        }
+    }
+
+    &__data{
+        text-align: center;
+        @include fontAll(1rem,400,$link);
+        line-height: 130%;
+        margin: 30px 0;
+    }
+}
+
+// news_in end
+
+
+@media (max-width:1200px){
+    .news_in__data{
+        font-size: 0.875rem;
+        margin: 20px 0;
+    }
+
+    .news_in__img{
+        height: auto;
+    }
+}

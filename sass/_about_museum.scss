@@ -1,0 +1,205 @@
+// about_museum start
+
+.about_museum{
+    position: relative;
+    margin-bottom: 100px;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding: 100px 0;
+
+    .about__title__h2{
+        color:$fff;
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        grid-gap: 10px;
+        margin-top: 20px;
+        li{
+            position: relative;
+        }
+
+        li+li{
+            padding-left: 60px;
+            a{
+                &::after{
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    background-color:$fff;
+                    width: 50px;
+                    height: 2px;
+                    transform:translate(0,-50%);
+                    -webkit-transform:translate(0,-50%);
+                    -moz-transform:translate(0,-50%);
+                    -ms-transform:translate(0,-50%);
+                    -o-transform:translate(0,-50%);
+                }
+            }
+        }
+    }
+
+    &__link{
+        @include fontAll(1.125rem,400,$fff);
+        line-height: 123%;
+    }
+}
+
+// about_museum end
+
+
+// about_content start
+
+.about_content{
+    position: relative;
+    margin-bottom: 100px;
+
+    &__text{
+        @include fontAll(1rem,400,$text);
+        line-height: 135%;
+        text-align: justify;
+        margin-top: 20px;
+        h1,h2,h3,h4,h5,h6,em,strong{
+            font-size: 110%;
+            color:$title;
+            font-weight: 700;
+            font-style: normal;
+            display: inline-block;
+        }
+
+        a{
+            font-size: 110%;
+            color:$title;
+            font-weight: 700;
+            font-style: normal;
+            display: inline-block;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            min-height: 150px;
+            max-height: 550px;
+            object-fit: cover;
+            margin: 20px 0;
+        }
+    }
+
+
+    &__cart__videos{
+        position: relative;
+        margin-top: 60px;
+        @include fiximg(100%,650px,true);
+
+        a{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .is-play{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 15px;
+                height: 20px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+// about_content end
+
+
+@media (max-width:1200px){
+    .about_museum{
+        padding: 60px 0;
+    }
+
+    .about_museum__link{
+        font-size: 1rem;
+    }
+
+    .about_museum__menu li + li {
+        padding-left: 40px;
+    }
+
+    .about_museum__menu li + li a::after{
+        width: 30px;
+    }
+
+    .about_content__text {
+        font-size: 0.875rem;
+    }
+
+    .about_content__text img{
+        margin: 10px 0;
+    }
+
+    .about_content__cart__videos{
+        margin-top: 30px;
+        height: 500px;
+    }
+}
+
+@media (max-width:1000px){
+    .about_content__cart__videos{
+        margin-top: 20px;
+        height: 400px;
+    }
+
+    .about_museum{
+        padding: 30px 0;
+    }
+}
+
+@media (max-width:750px){
+    .about_content__cart__videos{
+        height: 350px;
+    }
+
+    .about_museum__menu li + li {
+        padding-left: 30px;
+    }
+
+    .about_museum__menu li + li a::after{
+        width: 20px;
+    }
+
+    .about_museum__link {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width:550px){
+    .about_content__cart__videos{
+        height: 300px;
+    }
+}
+
+@media (max-width:450px){
+    .about_content__cart__videos{
+        height: 250px;
+    }
+}

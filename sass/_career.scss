@@ -1,0 +1,109 @@
+.career,
+.career-inside {
+  max-width: 1320px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+
+  .career-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0;
+
+    .img-content {
+      width: max-content;
+
+      img {
+        width: 180px;
+        object-fit: cover;
+      }
+    }
+
+    .text-content {
+      padding-left: 40px;
+      line-height: 32px;
+      height: fit-content;
+      width: auto;
+      max-height: 200px;
+      overflow: hidden;
+      color: #022133;
+      font-size: 20px;
+    }
+  }
+}
+
+.career-inside {
+  .photo {
+    max-width: 400px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .title {
+    width: 100%;
+    color: #022133;
+    font-family: "Garamond";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 40px 0;
+  }
+
+  .description {
+    color: #022133;
+    font-family: "Gotham Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 187.5% */
+  }
+}
+
+@media (max-width: 768px) {
+  .career .career-item {
+    .img-content img {
+      width: 140px;
+    }
+    .text-content {
+      padding-left: 30px;
+      max-height: 155px;
+    }
+  }
+
+  .career-inside {
+    .title {
+      font-size: 26px;
+      line-height: 30px;
+      margin: 35px 0;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .career .career-item {
+    flex-wrap: wrap;
+    .img-content {
+      width: 100%;
+      margin-bottom: 15px;
+
+      img {
+        width: 100%;
+        height: 300px;
+      }
+    }
+    .text-content {
+      padding-left: 0px;
+      text-align: center;
+    }
+  }
+}
