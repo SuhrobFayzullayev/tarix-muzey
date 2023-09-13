@@ -2950,11 +2950,4 @@ h2 {
     margin: 0 auto;
     cursor: grab; }
 
-@media (max-width: 786px) {
-  .fotogalereya_in .threed-in {
-    height: 400px !important; } }
-@media (max-width: 576px) {
-  .fotogalereya_in .threed-in {
-    height: 250px !important; } }
-
 /*# sourceMappingURL=index.css.map */

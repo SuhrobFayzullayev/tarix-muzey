@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D Widget example</title>
+    <link rel="stylesheet" href="./../assets/3d.css">
+    <script src="./../assets/js/vue.min.js"></script>
+    <script src="./../assets/js/photomechanics.js?v3"></script>
+</head>
+
+<body>
+<div class="items">
+    <div class="item">
+        <img src="Новая папка (71).jpg"
+             data-photomechanics='({
+                 helperText: "Нажмите для просмотра 3D фото",
+                 helperTimeout:1,
+                 menuBar: false,
+                 startImmediately: true,
+                 playOnClick: true,
+                 autoPlay: false,
+                 speed: 3,
+                 reverse: true,
+                 frames: 19,
+                 yframes: 1,
+                 zoomLevels: [20,100]
+                 })'/>
+        <script>
+            pm = new Photomechanics({});
+        </script>
+    </div>
+</div>
+</body>
+
+</html>
